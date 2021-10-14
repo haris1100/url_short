@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>svgMap HTML demos</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+  <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+
+  <link href="../public/svgMap-master/demo/html/demo.css" rel="stylesheet">
+  <link href="../public/svgMap-master/dist/svgMap.css" rel="stylesheet">
+  <script src="../public/svgMap-master/dist/svgMap.js"></script>
+</head>
+
+<body>
+
+  <div class="demo-wrapper">
+
+    <!-- Demo GPD -->
+
+<!--    <div class="demo-container">-->
+<!--      <h2>GDP per capita (PPP)</h2>-->
+
+<!--      <div id="svgMapGPD"></div>-->
+<!--      <script src="../public/svgMap-master/demo/html/data/gdp.js"></script>-->
+<!--      <script>-->
+<!--        new svgMap({-->
+<!--          targetElementID: 'svgMapGPD',-->
+<!--          data: svgMapDataGPD-->
+<!--        });-->
+<!--      </script>-->
+<!--    </div>-->
+
+    <!-- Demo population -->
+
+<!--    <div class="demo-container">-->
+<!--      <h2>Population desity (emojis as flags)</h2>-->
+
+<!--      <div id="svgMapPopulation"></div>-->
+<!--      <script src="../public/svgMap-master/demo/html/data/population.js"></script>-->
+<!--      <script>-->
+<!--        new svgMap({-->
+<!--          targetElementID: 'svgMapPopulation',-->
+<!--          data: svgMapDataPopulation,-->
+<!--          flagType: 'emoji'-->
+<!--        });-->
+<!--      </script>-->
+<!--    </div>-->
+
+    <!-- Demo person height in German -->
+
+    <div class="demo-container">
+      <h2>Clicks Per Country</h2>
+
+      <div id="svgMapPersonHeight"></div>
+      <script src="../public/svgMap-master/demo/html/data/personHeight.js"></script>
+      <script src="../public/svgMap-master/demo/html/local/countriesEN.js"></script>
+      <script>
+        new svgMap({
+          targetElementID: 'svgMapPersonHeight',
+          countryNames: svgMapCountryNamesEN,
+          data: svgMapDataPersonHeight,
+          colorMin: '#acc1e8',
+          colorMax: '#3ec75e',
+          hideFlag: true,
+          noDataText: 'no clicks'
+        });
+        // for(var key in svgMapCountryNamesDE)
+        // {
+        //     if(svgMapCountryNamesDE[key]=='Armenien')
+        //         alert(key);
+        // }
+
+      </script>
+    </div>
+
+  </div>
+
+</body>
+</html>
